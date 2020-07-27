@@ -8,26 +8,30 @@ import java.io.Serializable;
 public class Pagamento implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private Cartao cartao;
+    private int idCartao;
     private double valor;
     private String descricao;
+
+    public Pagamento() {
+
+    }
 
     public int getId() {
         return id;
     }
 
-    public void setIdPagamento(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Cartao getCartao() {
-        return cartao;
+    public int getIdCartao() {
+        return idCartao;
     }
 
-    public void setCartao(Cartao cartao) {
-        this.cartao = cartao;
+    public void setIdCartao(int idCartao) {
+        this.idCartao = idCartao;
     }
 
     public double getValor() {
